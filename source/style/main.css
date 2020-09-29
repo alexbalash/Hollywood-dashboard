@@ -1,32 +1,276 @@
 .nav-logo {
-  width: 70px;
-  height: 71px;
+  width: 2.4em;
+  height: 2.4em;
   background-color: #ffffff;
-  font-size: 30px;
+  font-size: calc(20px + 10 * ((100vw - 320px)/1054));
   color: #FD7858;
   text-align: center;
 }
 
 .nav-list {
-  padding: 0 0 0 5px;
+  padding: 0 0 0 0.3em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .nav-list__link {
-  font-size: 10px;
+  font-size: calc(10px + 0 * ((100vw - 320px)/1054));
   color: #FFFFFF;
   text-decoration: none;
 }
 
 .nav-list__item {
   list-style: none;
+  margin-bottom: 1.88em;
 }
 
 .nav-list__item:first-child::before {
   content: "";
   position: relative;
-  left:32%;
+  left: 35%;
   display: block;
+  width: 1.25em;
+  height: 1.13em;
   background-image: url(.././img/nav/home.png);
+}
+
+.nav-list__item:nth-child(2)::before {
+  content: "";
+  position: relative;
+  left: 32%;
+  display: block;
+  width: 1.25em;
+  height: 1.13em;
+  background-image: url(.././img/nav/chart.png);
+}
+
+.nav-list__item:nth-child(3)::before {
+  content: "";
+  position: relative;
+  left: 38%;
+  display: block;
+  width: 1em;
+  height: 1.13em;
+  background-image: url(.././img/nav/user.png);
+}
+
+.nav-list__item:nth-child(4)::before {
+  content: "";
+  position: relative;
+  left: 35%;
+  display: block;
+  width: 1.25em;
+  height: 1.25em;
+  background-image: url(.././img/nav/settings.png);
+}
+
+.nav-list__item:nth-child(5)::before {
+  content: "";
+  position: relative;
+  left: 36%;
+  display: block;
+  width: 1.25em;
+  height: 1.13em;
+  background-image: url(.././img/nav/information.png);
+}
+
+.nav-power-button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url(.././img/nav/power-button.png);
+  width: 1.25em;
+  height: 1.25em;
+  margin-bottom: 1.2em;
+}
+
+.hamburger {
+  position: absolute;
+  right: 50px;
+  top: 21px;
+  width: 50px;
+  height: 5px;
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger::before {
+  position: absolute;
+  right: 0px;
+  top: 14px;
+  width: 50px;
+  height: 5px;
+}
+
+.hamburger::after {
+  position: absolute;
+  right: 0px;
+  top: 28px;
+  width: 50px;
+  height: 5px;
+}
+
+.header-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-upper__content {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/rectangle.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 2em 1.125em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__folder {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/folder.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.25em 1.125em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__settings {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/settings.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.3em 1.1em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__upload {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/upload.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.25em 1.125em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__mail {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/envelope.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.25em 0.75em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__planet {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: url(.././img/header/planet.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.25em 1.25em;
+  border: 1px solid #F1F1F1;
+  border-top: none;
+}
+
+.header-upper__search {
+  width: 25em;
+  height: 2.8em;
+  border-radius: 1.67em;
+  border-color: #C8C8C8;
+}
+
+.header-upper__search::-webkit-input-placeholder {
+  color: #C8C8C8;
+  font-size: calc(10px + 2 * ((100vw - 320px)/1054));
+  padding-left: 0.7em;
+}
+
+.header-upper__search:-ms-input-placeholder {
+  color: #C8C8C8;
+  font-size: calc(10px + 2 * ((100vw - 320px)/1054));
+  padding-left: 0.7em;
+}
+
+.header-upper__search::-ms-input-placeholder {
+  color: #C8C8C8;
+  font-size: calc(10px + 2 * ((100vw - 320px)/1054));
+  padding-left: 0.7em;
+}
+
+.header-upper__search::placeholder {
+  color: #C8C8C8;
+  font-size: calc(10px + 2 * ((100vw - 320px)/1054));
+  padding-left: 0.7em;
+}
+
+.header-upper__search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-upper__person {
+  font-size: calc(10px + 3 * ((100vw - 320px)/1054));
+  color: #FD7858;
+  font-weight: 600;
+}
+
+.header-upper__role {
+  color: #BFBFBF;
+  font-size: calc(10px + 0 * ((100vw - 320px)/1054));
+}
+
+.header-upper__user-container {
+  padding-left: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-upper__person {
+  padding-top: 14px;
+  margin: 0;
+}
+
+.header-upper__more {
+  background-color: #BFBFBF;
+  width: 5px;
+  height: 18px;
+  margin-left: 49px;
+  margin-right: 18px;
 }
 
 .wrap {
@@ -43,14 +287,12 @@ body {
 }
 
 header {
-  width: 1300px;
   height: 169px;
-  background-color: blue;
+  background-color: #ffffff;
 }
 
 nav {
-  width: 70px;
-  height: 1000px;
+  position: relative;
   background-color: coral;
   display: -webkit-box;
   display: -ms-flexbox;

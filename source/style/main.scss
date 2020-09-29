@@ -23,10 +23,12 @@ header{
 }
 
 nav{
+    position: relative;
     background-color: coral;
     display: flex;
     flex-direction: column;
     text-align: center;
+   
 }
 
 main{
@@ -49,6 +51,7 @@ footer{
 
 .wrap, .main-wrap, .footer-wrap{
     display: flex;
+    
 }
 
 .main-wrap{

@@ -1,12 +1,7 @@
-@mixin nav-logo-menu ($url, $left-margin, $width, $height){
-    content: "";
-    position: relative;
-    left: $left-margin;
-    display: block;
-    width: $width;
-    height: $height;
-    background-image: $url;
-}
+@import ".././config/variables";
+@import ".././config/mixins";
+
+
 
 .nav-logo{
     width: 2.4em;
@@ -20,6 +15,7 @@
 .nav-list{
    padding: 0 0 0 0.3em;
    flex-grow: 1;
+  
    
 }
 
@@ -65,4 +61,32 @@
     width: 1.25em;
     height: 1.25em;
     margin-bottom: 1.2em;
+}
+
+.hamburger{
+    position:absolute;
+    right:50px;
+    top:21px;
+    width:50px;
+    height:5px;
+    background-color: black;
+    @include md{
+            display: none;
+    }
+}
+
+.hamburger::before{
+    position:absolute;
+    right:0px;
+    top:14px;
+    width:50px;
+    height:5px;
+}
+
+.hamburger::after{
+    position:absolute;
+    right:0px;
+    top:28px;
+    width:50px;
+    height:5px;
 }
