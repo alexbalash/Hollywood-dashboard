@@ -1,0 +1,64 @@
+@import "./config/variables";
+@import "./config/mixins";
+@import './components/nav';
+@import "./components/header";
+
+
+
+
+.wrap {
+    max-width: 1374px;
+    margin:0 auto;
+}
+body{
+    margin: 0;
+}
+*{
+    font-family: 'Lato', sans-serif;;
+}
+header{
+    
+    height: 169px;
+    background-color: #ffffff;
+}
+
+nav{
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main{
+    height: 815px;
+    width: 1000px;
+    background-color: cyan;
+}
+
+aside{
+    height: 558px;
+    width: 273px;
+    background-color: darkgreen;
+}
+
+footer{
+    height: 272px;
+    width: 229px;
+    background-color: darkkhaki;
+}
+
+.wrap, .main-wrap, .footer-wrap{
+    display: flex;
+}
+
+.main-wrap{
+    flex-direction: column;
+}
+
+.footer-wrap{
+    flex-direction: row;
+}
+
+.aside-wrap{
+flex-direction: column;
+}
