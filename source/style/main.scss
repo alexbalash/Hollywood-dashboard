@@ -28,6 +28,9 @@ nav{
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include md {
+        height: 2.4em;
+    }
    
 }
 
@@ -51,6 +54,10 @@ footer{
 
 .wrap, .main-wrap, .footer-wrap{
     display: flex;
+    @include md {
+        display: block;
+    }
+
     
 }
 

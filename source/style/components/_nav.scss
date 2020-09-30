@@ -10,12 +10,17 @@
     @include adoptive-font(30, 20);
     color:#FD7858;
     text-align: center;
+    @include md{
+        display: none;
+    }
 }
 
 .nav-list{
    padding: 0 0 0 0.3em;
    flex-grow: 1;
-  
+   @include md{
+       display: none;
+   }
    
 }
 
@@ -61,32 +66,40 @@
     width: 1.25em;
     height: 1.25em;
     margin-bottom: 1.2em;
+    @include md{
+        display: none;
+    }
 }
 
 .hamburger{
     position:absolute;
-    right:50px;
-    top:21px;
-    width:50px;
-    height:5px;
+    right:5%;
+    top:40%;
+    width:40px;
+    height:3px;
     background-color: black;
+    display: none;
     @include md{
-            display: none;
+        display:block;
     }
 }
 
 .hamburger::before{
+    content: "";
     position:absolute;
-    right:0px;
-    top:14px;
-    width:50px;
-    height:5px;
+    right:0%;
+    top:-157%;
+    width:40px;
+    height:3px;
+    background-color: black;
 }
 
 .hamburger::after{
+    content: "";
     position:absolute;
-    right:0px;
-    top:28px;
-    width:50px;
-    height:5px;
+    right:0%;
+    top:169%;
+    width:40px;
+    height:3px;
+    background-color: black;
 }
