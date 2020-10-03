@@ -1,105 +1,102 @@
 @import ".././config/variables";
 @import ".././config/mixins";
 
-
-
-.nav-logo{
-    width: 2.4em;
-    height: 2.4em;
-    background-color: #ffffff;
-    @include adoptive-font(30, 20);
-    color:#FD7858;
-    text-align: center;
-    @include md{
-        display: none;
-    }
-}
-
-.nav-list{
-   padding: 0 0 0 0.3em;
-   flex-grow: 1;
-   @include md{
-       display: none;
-   }
-   
-}
-
-.nav-list__link{
-    @include adoptive-font(10, 10);
-    color: #FFFFFF;
-    text-decoration: none;
-    
-}
-
-.nav-list__item{
-    list-style:none;
-    margin-bottom: 1.88em;
-}
-
-.nav-list__item:first-child::before{
-  @include nav-logo-menu(url(.././img/nav/home.png), 35%, 1.25em, 1.13em);
-   
-}
-
-.nav-list__item:nth-child(2)::before{
-    @include nav-logo-menu(url(.././img/nav/chart.png), 32%, 1.25em, 1.13em)
-}
-
-.nav-list__item:nth-child(3)::before{
-    
-    @include nav-logo-menu(url(.././img/nav/user.png),38%, 1em, 1.13em);
-
-}
-
-.nav-list__item:nth-child(4)::before{
-    @include nav-logo-menu(url(.././img/nav/settings.png), 35%, 1.25em, 1.25em);
-    
-}
-
-.nav-list__item:nth-child(5)::before{
-    @include nav-logo-menu(url(.././img/nav/information.png), 36%, 1.25em, 1.13em)
-}
-
-.nav-power-button{
-    align-self: center;
-    background-image: url(.././img/nav/power-button.png);
-    width: 1.25em;
-    height: 1.25em;
-    margin-bottom: 1.2em;
-    @include md{
-        display: none;
-    }
-}
-
-.hamburger{
-    position:absolute;
-    right:5%;
-    top:40%;
-    width:40px;
-    height:3px;
-    background-color: black;
+.nav-logo {
+  width: 2.4em;
+  height: 2.4em;
+  background-color: #ffffff;
+  @include adoptive-font(30, 20);
+  text-align: center;
+  color: #fd7858;
+  @include md {
     display: none;
-    @include md{
-        display:block;
-    }
+  }
 }
 
-.hamburger::before{
-    content: "";
-    position:absolute;
-    right:0%;
-    top:-157%;
-    width:40px;
-    height:3px;
-    background-color: black;
+.nav-list {
+  flex-grow: 1;
+  padding: 0 0 0 0.3em;
+  @include md {
+    display: none;
+  }
 }
 
-.hamburger::after{
-    content: "";
-    position:absolute;
-    right:0%;
-    top:169%;
-    width:40px;
-    height:3px;
-    background-color: black;
+.nav-list__link {
+  @include adoptive-font(10, 10);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-list__item {
+  margin-bottom: 1.88em;
+  list-style: none;
+}
+
+.nav-list__item:first-child::before {
+  @include nav-logo-menu(url(.././img/nav/home.png), 35%, 1.25em, 1.13em);
+}
+
+.nav-list__item:nth-child(2)::before {
+  @include nav-logo-menu(url(.././img/nav/chart.png), 32%, 1.25em, 1.13em);
+}
+
+.nav-list__item:nth-child(3)::before {
+  @include nav-logo-menu(url(.././img/nav/user.png), 38%, 1em, 1.13em);
+}
+
+.nav-list__item:nth-child(4)::before {
+  @include nav-logo-menu(url(.././img/nav/settings.png), 35%, 1.25em, 1.25em);
+}
+
+.nav-list__item:nth-child(5)::before {
+  @include nav-logo-menu(
+    url(.././img/nav/information.png),
+    36%,
+    1.25em,
+    1.13em
+  );
+}
+
+.nav-power-button {
+  align-self: center;
+  width: 1.25em;
+  height: 1.25em;
+  margin-bottom: 1.2em;
+  background-image: url(.././img/nav/power-button.png);
+  @include md {
+    display: none;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: -157%;
+  width: 40px;
+  height: 3px;
+  background-color: black;
+}
+
+.hamburger::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: 169%;
+  width: 40px;
+  height: 3px;
+  background-color: black;
 }

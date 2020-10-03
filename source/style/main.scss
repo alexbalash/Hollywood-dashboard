@@ -1,74 +1,68 @@
 @import "./config/variables";
 @import "./config/mixins";
-@import './components/nav';
+@import "./components/nav";
 @import "./components/header";
 
-
-
-
 .wrap {
-    max-width: 1374px;
-    margin:0 auto;
+  max-width: 1374px;
+  margin: 0 auto;
 }
-body{
-    margin: 0;
-}
-*{
-    font-family: 'Lato', sans-serif;;
-}
-header{
-    
-    height: 169px;
-    background-color: #ffffff;
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
-nav{
-    position: relative;
-    background-color: coral;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    @include md {
-        height: 2.4em;
-    }
-   
+header {
+  height: 169px;
+  background-color: #ffffff;
 }
 
-main{
-    height: 815px;
-    width: 1000px;
-    background-color: cyan;
+nav {
+  position: relative;
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include md {
+    height: 2.4em;
+  }
 }
 
-aside{
-    height: 558px;
-    width: 273px;
-    background-color: darkgreen;
+main {
+  height: 815px;
+  width: 1000px;
+  background-color: cyan;
 }
 
-footer{
-    height: 272px;
-    width: 229px;
-    background-color: darkkhaki;
+aside {
+  height: 558px;
+  width: 273px;
+  background-color: darkgreen;
 }
 
-.wrap, .main-wrap, .footer-wrap{
-    display: flex;
-    @include md {
-        display: block;
-    }
-
-    
+footer {
+  height: 272px;
+  width: 229px;
+  background-color: darkkhaki;
 }
 
-.main-wrap{
-    flex-direction: column;
+.wrap,
+.main-wrap,
+.footer-wrap {
+  display: flex;
+  @include md {
+    display: block;
+  }
 }
 
-.footer-wrap{
-    flex-direction: row;
+.main-wrap {
+  flex-direction: column;
 }
 
-.aside-wrap{
-flex-direction: column;
+.footer-wrap {
+  flex-direction: row;
+}
+
+.aside-wrap {
+  flex-direction: column;
 }

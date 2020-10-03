@@ -1,45 +1,45 @@
-
-@mixin adoptive-font($pcSize, $mobSize){
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px)/#{$maxWidth}));
+@mixin adoptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) /#{$maxWidth})
+  );
 }
 
 // Small devices
 @mixin sm {
-    @media (max-width: #{$screen-sm-min}) {
-        @content;
-    }
- }
- 
- // Medium devices
- @mixin md {
-    @media (max-width: #{$screen-md-min}) {
-        @content;
-    }
- }
- 
- // Large devices
- @mixin lg {
-    @media (max-width: #{$screen-lg-min}) {
-        @content;
-    }
- }
- 
- // Extra large devices
- @mixin xl {
-    @media (max-width: #{$screen-xl-min}) {
-        @content;
-    }
- }
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
 
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
 
- @mixin nav-logo-menu ($url, $left-margin, $width, $height){
-    content: "";
-    position: relative;
-    left: $left-margin;
-    display: block;
-    width: $width;
-    height: $height;
-    background-image: $url;
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin nav-logo-menu($url, $left-margin, $width, $height) {
+  content: "";
+  position: relative;
+  left: $left-margin;
+  display: block;
+  width: $width;
+  height: $height;
+  background-image: $url;
 }

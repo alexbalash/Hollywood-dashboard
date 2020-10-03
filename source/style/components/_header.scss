@@ -1,91 +1,90 @@
-.header-upper{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.header-upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-@mixin header-menu-item($url, $image-width, $image-height){
-    width:3.7em;
-    height:4.44em;
-    background-image: $url;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: $image-width $image-height;
-    border: 1px solid #F1F1F1;
-    border-top:none
+@mixin header-menu-item($url, $image-width, $image-height) {
+  width: 3.7em;
+  height: 4.44em;
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $image-width $image-height;
+  border: 1px solid #f1f1f1;
+  border-top: none;
 }
 
-.header-upper__content{
-    @include header-menu-item(url(.././img/header/rectangle.png), 2em, 1.125em);
-} 
-
-.header-upper__folder{
-    @include header-menu-item(url(.././img/header/folder.png), 1.25em, 1.125em);
-} 
-
-.header-upper__settings{
-    @include header-menu-item(url(.././img/header/settings.png), 1.3em, 1.1em);
-} 
-
-.header-upper__upload{
-    @include header-menu-item(url(.././img/header/upload.png), 1.25em, 1.125em);
-} 
-
-.header-upper__mail{
-    @include header-menu-item(url(.././img/header/envelope.png), 1.25em, 0.75em);
-} 
-
-.header-upper__planet{
-    @include header-menu-item(url(.././img/header/planet.png), 1.25em, 1.25em);
-} 
-
-.header-upper__search{
-    width: 25em;
-    height: 2.8em;
-    border-radius: 1.67em;
-    border-color: #C8C8C8;
+.header-upper__content {
+  @include header-menu-item(url(.././img/header/rectangle.png), 2em, 1.125em);
 }
 
-.header-upper__search::placeholder{
-    color: #C8C8C8;
-    @include adoptive-font(12,10);
-    padding-left: 0.7em;
+.header-upper__folder {
+  @include header-menu-item(url(.././img/header/folder.png), 1.25em, 1.125em);
 }
 
-.header-upper__search-container{
-    display: flex;
-    flex-grow:1;
-    justify-content: center;
+.header-upper__settings {
+  @include header-menu-item(url(.././img/header/settings.png), 1.3em, 1.1em);
 }
 
-.header-upper__person{
-    @include adoptive-font(13, 10);
-    color:#FD7858;
-    font-weight: 600;
-    
-
+.header-upper__upload {
+  @include header-menu-item(url(.././img/header/upload.png), 1.25em, 1.125em);
 }
 
-.header-upper__role{
-    color:#BFBFBF;
-    @include adoptive-font(10, 10);
+.header-upper__mail {
+  @include header-menu-item(url(.././img/header/envelope.png), 1.25em, 0.75em);
 }
 
-.header-upper__user-container{
-    padding-left: 18px;
-    display: flex;
-    flex-direction: column;
+.header-upper__planet {
+  @include header-menu-item(url(.././img/header/planet.png), 1.25em, 1.25em);
 }
 
-.header-upper__person{
-    padding-top: 14px;
-    margin: 0;
+.header-upper__search {
+  width: 25em;
+  height: 2.8em;
+  border-radius: 1.67em;
+  border-color: #c8c8c8;
 }
 
-.header-upper__more{
-    background-color: #BFBFBF;
-    width: 5px;
-    height: 18px;
-    margin-left: 49px;
-    margin-right: 18px;
+.header-upper__search::placeholder {
+  padding-left: 0.7em;
+
+  @include adoptive-font(12, 10);
+  color: #c8c8c8;
+}
+
+.header-upper__search-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.header-upper__person {
+  @include adoptive-font(13, 10);
+  font-weight: 600;
+  color: #fd7858;
+}
+
+.header-upper__role {
+  @include adoptive-font(10, 10);
+  color: #bfbfbf;
+}
+
+.header-upper__user-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+}
+
+.header-upper__person {
+  padding-top: 14px;
+  margin: 0;
+}
+
+.header-upper__more {
+  width: 5px;
+  height: 18px;
+  margin-left: 49px;
+  margin-right: 18px;
+  background-color: #bfbfbf;
 }
